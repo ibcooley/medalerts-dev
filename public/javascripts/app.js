@@ -106,21 +106,30 @@ angular.module('main.controllers', [])
 			}
 		};
 
-		/**
-		 * Adds or removes a drug from the DrugList
-		 * @param drug
-		 */
-		$scope.removeDrug = function(drug) {
-			DrugsList.remove(drug.name); //use the service to remove from stored values
-			$scope.followedDrugs = _.reject($scope.followedDrugs, { name: drug.name })
-		};
+      /**
+       * Removes drug from the DrugsList
+       * @param drug
+       */
+      $scope.removeDrug = function (drug) {
+        DrugsList.remove(drug.name); //use the service to remove from stored values
+        $scope.followedDrugs = _.reject($scope.followedDrugs, {name: drug.name})
+      };
 
-		/**
-		 * handle hover state for button
-		 */
-		$scope.hoverFollow = function() {
-			this.followHovered = true;
-		};
+      /**
+       * Adds a drug to the DrugsList
+       * @param drug
+       */
+      $scope.addDrug = function (drug) {
+      	DrugsList.add(drug.name);
+      	$scope.followedDrugs.push(drug);
+      }
+
+      /**
+       * handle hover state for button
+       */
+      $scope.hoverFollow = function () {
+        this.followHovered = true;
+      };
 
 		/**
 		 * handle hover state for button
@@ -177,10 +186,12 @@ angular.module('main.controllers', [])
 			}
 		}, true);
 
-
-		/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		 Private helper functions
-		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+      $scope.$on('subscription-change', function(e, data) {
+      	$scope[data.action + 'Drug'](data.drug);
+      })
+      /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Private helper functions
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 		/**
 		 * Loads drugs using the DrugList service and for each one makes an
@@ -202,11 +213,11 @@ angular.module('main.controllers', [])
 		}
 	}])
 
-	/**
-	 * Controller for drug details
-	 */
-	.controller('DrugDetailsCtrl', ["$scope", "$log", "$location", "$modalInstance", "DrugService", "DrugsList", "drug", function ($scope, $log, $location, $modalInstance, DrugService,
-											 DrugsList, drug) {
+/**
+ * Controller for drug details
+ */
+    .controller('DrugDetailsCtrl', ["$scope", "$log", "$location", "$modalInstance", "$rootScope", "DrugService", "DrugsList", "drug", function ($scope, $log, $location, $modalInstance, $rootScope, DrugService,
+                                             DrugsList, drug) {
 
 		/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		 Controller Initialization
@@ -228,14 +239,15 @@ angular.module('main.controllers', [])
 		 Scope functions
 		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-		/**
-		 * Allow the user to follow/unfollow a drug from the details view via the
-		 * DrugsList service
-		 */
-		$scope.toggleFollow = function() {
-			DrugsList[$scope.drug.following ? 'remove' : 'add']($scope.drug.name);
-			drug.following = !drug.following;
-		};
+      /**
+       * Allow the user to follow/unfollow a drug from the details view via the
+       * DrugsList service
+       */
+      $scope.toggleFollow = function () {
+      	var action = $scope.drug.following ? 'remove' : 'add';
+      	$rootScope.$broadcast('subscription-change', {action: action, drug: $scope.drug});
+        drug.following = !drug.following;
+      };
 
 		$scope.done = function() {
 			$modalInstance.close();
