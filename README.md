@@ -1,4 +1,4 @@
-# MedAlerts Pool II
+# MedAlerts Pool Two
 
 Check out the [live demo](http://medalerts-dev.sparcedge.com/) or see our [installation instructions](INSTALLATION.md).
 
