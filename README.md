@@ -1,4 +1,4 @@
-# MedAlerts Pool II Prototype Application
+# MedAlerts Pool II
 
 Check out the [live demo](http://medalerts-dev.sparcedge.com/) or see our [installation instructions](INSTALLATION.md).
 
@@ -121,4 +121,4 @@ There is an [email contact](mailto:18f@sparcedge.com) link so users can report b
 
 SPARC created an API layer to interact with and aggregate openFDA results and demonstrate OAuth2 competency.
 
-We open sourced all prototype code via GitHub under the [MIT License](LICENSE.md) and published our approach to development via this file.
+We open sourced all prototype code via GitHub under the [MIT License](LICENSE.md).
