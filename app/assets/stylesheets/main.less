@@ -111,28 +111,6 @@
 
 @app-faint-blue: #edfcff;
 
-// [class*="drug-status"] {
-// 	background: @app-light-blue url("http://18f-cdn.sparcedge.com/recall.svg") no-repeat 8px 30%;
-//   background-size: 36px;
-// }
-
-// .drug-status-recall {
-//   background: @brand-danger url("http://18f-cdn.sparcedge.com/recall.svg")  no-repeat scroll 12px 30% / 36px 36px;
-//   background-size: 36px;
-
-// .drug-status-label {
-//   background: @brand-info url("http://18f-cdn.sparcedge.com/label-change.svg")  no-repeat scroll 12px 30% / 36px 36px;
-//   background-size: 36px;
-// }
-
-// .drug-status-loading {
-//   //???
-// }
-
-// .drug-status-ok {
-//   background: @brand-success url("http://18f-cdn.sparcedge.com/all-good.svg")  no-repeat scroll 12px 30% / 36px 36px;
-// 	background-size: 43px;
-// }
 
 .drug-summary {
   background-color: #ffffff;
@@ -301,6 +279,10 @@ main.followed-drugs {
 	  background: @brand-success url("http://18f-cdn.sparcedge.com/all-good.svg") no-repeat 12px 20px;
 	  background-size: 36px 36px;
 	}
+
+    .drug-status-loading {
+      background-color: @app-gray-00;
+    }
 
 	button.btn-follow {
 		position: absolute;
