@@ -11,7 +11,7 @@ env:
   global:
     - AWS_ACCESS_KEY_ID=AKIAJ5DLTV3B2BBLBJPQ
     #Encrypted AWS Secret Key
-    - secure: TUeg3jIcfWuGzt0nQpUKr06WLD5eX1C9j2+C8luADvN3TmTGbGLxzJwMgOctDwIHOvcWddzvQm+a1FVE/CggVJBHfIam3fxIQywP+VXTgjiTTlPMqUBlHTQYhvYizPyWRoi+iFYdkWQg9HhTvui4KTFONPon2g8WlXc/VMcCEtOVy9kYMpa2rwdt6xXNJCaD/zw2zLkZmxGPiTvWTnwBV6bWCG9csC5qihZ3hRgTZNrX877de+DFrla+aR9QgN3b26MVGix/IBmWNG8tD4AvaVeuD70NSpuJTJV6VIz4UZ9Z7ibVx2FeVfiszS3WaTejHYtLpRNcEEZQlKlrg/AUoA==    
+    - secure: AsVKX05UNKDBqsGN43bdtUXq6MZu2TQGcrJNAMwcuBgxLKBH8ca1gi1Ix4DRerPGQsAeI/pNOc4TsYcJdxK/ClTng7ulIIiZflgaOZhG1hwzl9V+y55kLVJ9/ATumKPLdm7V5bIX4uBJ1JSf84x2oOo15yiZeRNqHdPosm+ChJAszSsniR0dLLcq2Fg3bvNP3g4TcMpxIvc3NjhtUzznp/ihOs3vpycUDFOvhbtjQuRZmVj0kILMmKslaPM6vZDVyVxzyGkI/joxwsxZfSwnk8PDpzs26DObHDRjybroyOofS1E1YFaOkTxxSTHFRyxlGZhK8N50FdPTrHUf0c3qFA==    
     - AWS_DEFAULT_REGION=us-east-1
 
 before_install:
