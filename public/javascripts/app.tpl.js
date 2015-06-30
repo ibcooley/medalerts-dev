@@ -285,14 +285,14 @@ module.run(['$templateCache', function($templateCache) {
     '			<div class="feedback list-unstyled col-md-6">\n' +
     '				<h2>Feedback Welcome</h2>\n' +
     '\n' +
-    '  				<p>Medalerts was built as a beta to showcase our ability to rapidly create a product of value and in response to the RFP from 18F. It was scoped to create a lightweight app that delivers useful functionality to the user. This prototype leverages the openFDA beta research project and not for clinical use. Please refer to the OpenFDA <a href="https://open.fda.gov/terms/">Terms of Service</a>.</p>\n' +
+    '                <p>SPARC built Medalerts to demonstrate our ability to rapidly create a product of value using an Agile development methodology. This prototype leverages the openFDA beta research project and is not for clinical use. Please refer to the OpenFDA <a href="https://open.fda.gov/terms/">Terms of Service</a>.</p>\n' +
     '\n' +
-    '  				<p>In future phases of development, the product roadmap may include:</p>\n' +
+    '  				<p>In future phases of development, the product roadmap may include the ability to:</p>\n' +
     '				<ul>\n' +
-    '					<li>The ability to register and receive email, social or SMS notifications about the medications they follow.</li>\n' +
+    '					<li>Register and receive email, social or SMS notifications about the medications they follow.</li>\n' +
     '					<li>Create and follow multiple lists.</li>\n' +
     '					<li>Integration with other service APIs for a richer experience.</li>\n' +
-    '					<li>The ability to cross reference your list of followed drugs for adverse reactions to each other. </li>\n' +
+    '					<li>Cross-reference your list of followed drugs for adverse reactions to each other.</li>\n' +
     '					<li>Increase information, crowdsourced reviews, and listing alternative drugs within each medications detail view.</li>\n' +
     '				</ul>\n' +
     '				<span>\n' +
