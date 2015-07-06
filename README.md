@@ -121,4 +121,3 @@ There is an [email contact](mailto:18f@sparcedge.com) link so users can report b
 
 SPARC created an API layer to interact with and aggregate openFDA results and demonstrate OAuth2 competency.
 
-We open sourced all prototype code via GitHub under the [MIT License](LICENSE.md).
