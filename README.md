@@ -1,6 +1,6 @@
 # MedAlerts Pool Two
 
-Check out the [live demo](http://medalerts.sparcedge.com/) or see our [installation instructions](INSTALLATION.md).
+Check out http://medalerts.sparcedge.com/ or see our [installation instructions](INSTALLATION.md).
 
 [SPARC](http://sparcedge.com) evaluated the [FDA's](http://www.fda.gov/) role, mission, and goals to build a prototype that empowers consumers to research medications for recalls, label changes and medication updates.
 
